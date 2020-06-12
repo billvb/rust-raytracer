@@ -3,7 +3,7 @@
 Weekend Project: A simple, crude Raytracer for Linux.
 Inspired by the helpful lessons from [https://github.com/ssloy](https://github.com/ssloy)
 It features a single point-source of light illuminating solid spheres (with specular highlights).
-Moving the renderer into a loop this software product achieves an impressive 0.3 FPS with approximately 20 entities at 1080p.
+Moving the renderer into a loop this software product achieves an impressive 0.3 FPS with approximately 20 entities at 1920p.
 
 ![Sample](sample.png)
 
