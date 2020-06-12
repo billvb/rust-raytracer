@@ -5,6 +5,8 @@ Inspired by the helpful lessons from [https://github.com/ssloy](https://github.c
 It features a single point-source of light illuminating solid spheres (with specular highlights).
 Moving the renderer into a loop this software product achieves an impressive 0.3 FPS with approximately 20 entities at 1080p.
 
+![Sample](sample.png)
+
 ## Compile and Run
 
 `cargo build` ; `cargo run`

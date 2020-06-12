@@ -56,18 +56,14 @@ fn main() -> std::io::Result<()> {
         };
         spheres.push(s1);
     }
-    spheres.push(geometry::Sphere {
-        center: (-5000f32, 0f32, -10000f32),
-        radius: 1000f32,
-    });
-    spheres.push(geometry::Sphere {
-        center: (-1000f32, 0f32, -10000f32),
-        radius: 500f32,
-    });
-    spheres.push(geometry::Sphere {
-        center: (4000f32, 0f32, -10000f32),
-        radius: 700f32,
-    });
+
+    for i in 0..12 {
+        let z = -5000f32 + -15000f32 * i as f32;
+        spheres.push(geometry::Sphere {
+            center: ( ((i*i) as f32) * 500f32, ((i * i) as f32) * 600f32 - 1000f32, z),
+            radius: 700f32,
+        });
+    }
 
     let mut raygun = raytracer::RayTracer {
         display: disp.clone(),
@@ -75,7 +71,7 @@ fn main() -> std::io::Result<()> {
         camera_vec: (0.0f32, 0.0f32, -1.0f32),
         camera_fov: 3.1415f32 / 3f32,
         light: raytracer::Light {
-            location: (0.0f32, 0.0f32, -2000f32),
+            location: (0.0f32, 0.0f32, -4000f32),
             intensity: 1.0f32,
         },
     };
